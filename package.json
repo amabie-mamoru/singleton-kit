@@ -1,0 +1,10 @@
+{
+  "name": "com.amabie.singletonkit",
+  "displayName": "SingletonKit",
+  "version": "0.1.0",
+  "unity": "2020.2",
+  "description": "singleton kit",
+  "author": {
+    "name": "amabie-mamoru"
+  }
+}
