@@ -18,7 +18,7 @@ git@github.com:amabie-mamoru/unity-singleton-kit.git
 
 ![](./Documentation~/images/imported-this-module.png)
 
-Let's enjoy!
+Let's enjoy 🧜🏼‍♂️
 
 # Features
 
