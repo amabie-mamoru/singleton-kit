@@ -1,6 +1,6 @@
 # unity-singleton-kit
 
-Singleton Kit For Unity
+Singleton kit for unity
 
 ## Get started
 
