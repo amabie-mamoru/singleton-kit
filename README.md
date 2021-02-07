@@ -1,4 +1,4 @@
-# unity-singleton-kit
+# singleton-kit
 
 Singleton kit for unity
 
