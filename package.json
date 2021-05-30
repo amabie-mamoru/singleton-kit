@@ -2,7 +2,7 @@
   "name": "com.amabie.singletonkit",
   "displayName": "SingletonKit",
   "version": "1.0.0",
-  "unity": "2020.2",
+  "unity": "2021.1",
   "description": "singleton kit",
   "author": {
     "name": "amabie-mamoru"
