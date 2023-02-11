@@ -62,7 +62,48 @@ public class Main : MonoBehaviour
 }
 ```
 
-## SingletonMonoBehaviour
+## UniqueMonoBehaviour and UniqueMonoBehaviourValidator
+
+If you want to use UniqueMonoBehaviour class, you must use with UniqueMonoBehaviourValidator.
+UniqueMonoBehaviourValidator is very slow. If you use, I recommend to use preprocessor (e.g. #if UNITY\_EDITOR).
+
+### Interface
+
+#### Static Variables
+
+Variable name | Description
+--- | ---
+Instance | Return this class instance
+
+#### Instance methods
+
+Method name | Description
+--- | ---
+Create | Return void
+Permanent | Don't destroy on load scene
+
+### Usage
+
+```cs
+using com.amabie.SingletonKit;
+
+public class Hoge : UniqueMonoBehaviour<Hoge>
+{
+}
+
+public class Main : MonoBehaviour
+{
+    public void Awake()
+    {
+        Hoge.Instance.Create();
+#if UNITY_EDITOR
+        UniqueMonoBehaviourValidator.Instance.Create();
+#endif
+    }
+}
+```
+
+## [Obsolete] SingletonMonoBehaviour
 
 ### Interface
 

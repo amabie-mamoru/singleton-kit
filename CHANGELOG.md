@@ -4,6 +4,18 @@
 
 nothing
 
+## [2.0.0] - 2023-02-11
+
+### Added
+
+- high peformance pseudo singleton class for monobehaviour
+- validator to support upper class
+- original exception class
+
+### Obsoleted
+
+- singleton class for monobehaviour
+
 ## [1.0.0] - 2021-02-05
 
 ### Added
@@ -18,5 +30,5 @@ nothing
 
 ### Added
 
-- add singleton class
-- add singleton class for monobehaviour
+- singleton class
+- singleton class for monobehaviour
