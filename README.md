@@ -1,4 +1,4 @@
-# unity-singleton-kit
+# singleton-kit
 
 Singleton kit for unity
 
@@ -13,7 +13,7 @@ Second, Click [+] button and select [Add package from git URL...]
 And finally, copy following url and paste in package manager text box.
 
 ```
-git@github.com:amabie-mamoru/unity-singleton-kit.git
+git@github.com:amabie-mamoru/singleton-kit.git
 ```
 
 ![](./Documentation~/images/imported-this-module.png)
