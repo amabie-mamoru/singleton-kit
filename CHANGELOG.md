@@ -4,6 +4,13 @@
 
 nothing
 
+## [1.1.0] - 2023-02-17
+
+### Modified
+
+- create gameObject instead of throw exception
+- throw exception type from Exception to SingletonMonoBehaviourException
+
 ## [1.0.0] - 2021-02-05
 
 ### Added
@@ -18,5 +25,5 @@ nothing
 
 ### Added
 
-- add singleton class
-- add singleton class for monobehaviour
+- singleton class
+- singleton class for monobehaviour
