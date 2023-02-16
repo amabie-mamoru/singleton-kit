@@ -32,12 +32,6 @@ Variable name | Description
 --- | ---
 Instance | Return this class instance
 
-#### Instance methods
-
-Method name | Description
---- | ---
-Permanent | Don't destroy on load scene
-
 ### Usage
 
 ```cs

@@ -19,12 +19,21 @@ namespace com.amabie.SingletonKit {
                     instance = (T)FindObjectOfType(t);
                     if (instance == null)
                     {
-                        throw new Exception(t + " をアタッチしている GameObject がありません。");
+                        instance = Create();
                     }
                 }
 
                 return instance;
             }
+        }
+
+        /// <summary>
+        /// ゲームオブジェクトを生成する
+        /// </summary>
+        private static T Create()
+        {
+            var gameObj = new GameObject(typeof(T).Name);
+            return gameObj.AddComponent<T>();
         }
 
         virtual protected void Awake()
@@ -34,7 +43,7 @@ namespace com.amabie.SingletonKit {
             if (this != Instance)
             {
                 Destroy(this);
-                throw new Exception(typeof(T) +
+                throw new SingletonMonoBehaviourException(typeof(T) +
                     " は既に他の GameObject にアタッチされているため、コンポーネントを破棄します。" +
                     " アタッチされている GameObject は " + Instance.gameObject.name + " です。");
             }
@@ -47,6 +56,11 @@ namespace com.amabie.SingletonKit {
         {
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    public class SingletonMonoBehaviourException : Exception
+    {
+        public SingletonMonoBehaviourException(string message) : base(message) { }
     }
 
     public abstract class Singleton<T> where T : class, new()
