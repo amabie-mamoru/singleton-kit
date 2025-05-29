@@ -4,6 +4,13 @@
 
 nothing
 
+## [1.2.0] - 2025-05-29
+
+### Modified
+
+- FindObjectOfType() has been obsolete. Use FindFirstObjectByType() instead
+- Changed validation processing to be performed in Start() instead of Awake()
+
 ## [1.1.0] - 2023-02-17
 
 ### Modified

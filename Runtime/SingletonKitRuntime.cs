@@ -36,7 +36,7 @@ namespace com.amabie.SingletonKit {
             return gameObj.AddComponent<T>();
         }
 
-        virtual protected void Awake()
+        virtual protected void Start()
         {
             // 他のGameObjectにアタッチされているか調べる。
             // アタッチされている場合は破棄して例外を発生する。
