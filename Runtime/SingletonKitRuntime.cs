@@ -16,7 +16,7 @@ namespace com.amabie.SingletonKit {
                 {
                     Type t = typeof(T);
 
-                    instance = (T)FindObjectOfType(t);
+                    instance = (T)FindFirstObjectByType(t);
                     if (instance == null)
                     {
                         instance = Create();
@@ -36,7 +36,17 @@ namespace com.amabie.SingletonKit {
             return gameObj.AddComponent<T>();
         }
 
+        /// <summary>
+        /// Start() メソッドは他のコンポーネントが初期化された後で使いたい内容を記述する場所
+        /// Instance プロパティは FindFirstObjectByType を利用しており、他コンポーネントの初期化を待ったほうがよい
+        /// よって、バリデーションの処理は Awake() ではなく Start() で検証することにした
+        /// </summary>
         virtual protected void Start()
+        {
+            Validate();
+        }
+
+        virtual protected void Validate()
         {
             // 他のGameObjectにアタッチされているか調べる。
             // アタッチされている場合は破棄して例外を発生する。
